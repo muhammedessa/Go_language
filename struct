@@ -1,0 +1,39 @@
+package main
+
+import (
+	"fmt"
+)
+
+
+type address struct {
+street_name string
+street_number int
+phone_number int
+city string
+}
+
+type student struct {
+name string
+age int
+department string  
+address
+}
+
+func (s student) printInfo(){
+fmt.Println(s , "from student function")
+}
+
+
+func (a address) printAddress(){
+fmt.Println(a , "from address function")
+}
+
+func main() {
+
+var muhammed_address = address{"Bakhtiyari street" , 12121 , 34234322 , "Sulaymaniyeh"}
+var muhammed = student{name:"Muhammed", age:37, department:"Go Developer", address: address{"Bakhtiyari street" , 12121 , 34234322 , "Sulaymaniyeh"}}
+	muhammed.printInfo()
+	muhammed_address. printAddress()
+	//fmt.Println(muhammed.name)
+	//fmt.Println(muhammed.age) 
+}

@@ -1,0 +1,41 @@
+package main
+
+import (
+	"fmt"
+)
+
+type animal interface{
+sleeping()
+}
+
+func printInfo(a animal){
+fmt.Println(a )
+}
+
+type cat struct {
+name string
+color string
+}
+
+func (c cat) sleeping(){
+fmt.Println( "My Cat is sleeping" )
+}
+
+type dog struct {
+name string
+color string
+}
+
+func (d dog) sleeping(){
+fmt.Println( "My Dog is sleeping" )
+}
+
+func main() {
+
+var c = cat{name:"Katy", color:"White"}
+var d = dog{name:"Dogi", color:"Black"}
+	 c. sleeping()
+	d. sleeping()
+	printInfo(c)
+	printInfo(d)
+}

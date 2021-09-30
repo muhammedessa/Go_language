@@ -1,0 +1,33 @@
+package main
+
+import (
+	"fmt"
+	"reflect"
+	"strings"
+)
+
+func main() {
+
+var my_array = []string{"Muhammed","Essa","Hameed"}
+
+var name = "Muhammed"
+	fmt.Println(reflect.TypeOf(name))
+	fmt.Println(len(name))
+	fmt.Println(strings.ToUpper(name))
+	fmt.Println(strings.ToLower(name))
+	fmt.Println(strings.HasPrefix(name,"Mu" ))
+	fmt.Println(strings.HasSuffix(name,"ed" ))
+	fmt.Println(strings.Join(my_array,"-" ))
+	fmt.Println(strings.Repeat(name , 3 ))
+	fmt.Println(strings.Contains(name , "ha" ))
+	fmt.Println(strings.Index(name , "ha" ))
+	fmt.Println(strings.Count(name , "m" ))
+	fmt.Println(strings.Replace(name , "m" , "c",2 ))
+	fmt.Println(strings.Compare( "Muhammed" , "muhammed"  ))
+	fmt.Println(strings.Compare( "Muhammed" , "Muhammed"  ))
+	fmt.Println(strings.Compare( "muhammed" , "Muhammed"  ))
+	fmt.Println(  "       muhammed.     "    )
+	fmt.Println(strings.TrimSpace("       muhammed.     "  ))
+	fmt.Println(strings.ContainsAny( "muhammed" , "u"  ))
+	fmt.Println(strings.ContainsAny( "muhammed" , "s"  ))
+}
